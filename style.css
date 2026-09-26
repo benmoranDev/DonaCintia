@@ -201,3 +201,33 @@ body {
         height: 120px;
     }
 }
+
+/* Estilos para Kits e Linha Fitness */
+.card-kits {
+    background: linear-gradient(135deg, #fff7ee 0%, #fff0f0 100%);
+    border-left: 5px solid #800000 !important;
+    border-radius: 12px;
+}
+
+.kit-box {
+    border-color: #f0d5c0 !important;
+    transition: transform 0.3s ease;
+}
+
+.kit-box:hover {
+    transform: translateY(-3px);
+}
+
+.badge-fitness {
+    background-color: #28a745;
+}
+
+.card-prato.border-success {
+    border-width: 1px !important;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-prato.border-success:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 18px rgba(40, 167, 69, 0.15) !important;
+}
