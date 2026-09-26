@@ -1,69 +1,90 @@
-/* Configurações Gerais */
+/* Configurações Globais */
 body {
     background-color: #f8f1e7;
     font-family: 'Poppins', sans-serif;
     color: #333;
+    overflow-x: hidden;
 }
 
-/* Header & Banner */
+/* Header & Logo */
 .header-banner {
     background-color: #ffffff;
     border-bottom: 4px solid #800000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
 }
 
 .logo-title {
     font-family: 'Great Vibes', cursive;
-    font-size: 3.5rem;
+    font-size: 2.8rem;
     color: #800000;
     font-weight: bold;
+    margin: 0;
 }
 
 .badge-cardapio {
     background-color: #800000;
     color: #ffffff;
     display: inline-block;
-    padding: 8px 25px;
+    padding: 6px 20px;
     border-radius: 20px;
 }
 
 .badge-cardapio h2 {
-    font-size: 1.2rem;
+    font-size: 1rem;
     margin: 0;
     letter-spacing: 1px;
 }
 
-/* Ajustes das Imagens do Cardápio */
+.section-title {
+    color: #800000;
+    font-weight: 700;
+    font-size: 1.3rem;
+}
+
+/* Ajustes Responsivos para Imagens (Mobile-First) */
 .img-marmita {
     width: 100%;
-    height: 120px;
+    height: 100px;
     object-fit: cover;
     border-radius: 8px 0 0 8px;
+    transition: transform 0.4s ease;
+}
+
+.card-prato:hover .img-marmita {
+    transform: scale(1.08);
 }
 
 .img-thumbnail-opcao {
-    width: 40px;
-    height: 40px;
+    width: 36px;
+    height: 36px;
     object-fit: cover;
     border-radius: 50%;
-    border: 1px solid #800000;
+    border: 2px solid #800000;
 }
 
-/* Cards dos Pratos Destaque */
+/* Cards dos Pratos */
 .card-prato {
     border: none;
     border-radius: 12px;
     overflow: hidden;
     background-color: #ffffff;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-prato:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12) !important;
 }
 
 .preco-texto {
     font-weight: 600;
     color: #555;
+    font-size: 0.9rem;
 }
 
 .preco {
     color: #800000;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     font-weight: bold;
 }
 
@@ -76,9 +97,86 @@ body {
 
 .list-group-item {
     background: transparent;
-    border-bottom: 1px solid #eee;
-    font-size: 0.95rem;
+    border-bottom: 1px solid #f0e0d0;
+    font-size: 0.9rem;
     font-weight: 500;
+}
+
+/* Botões do WhatsApp */
+.btn-whatsapp-card {
+    background-color: #25d366;
+    color: #ffffff;
+    font-weight: 600;
+    border: none;
+    border-radius: 20px;
+    padding: 4px 12px;
+    font-size: 0.85rem;
+    transition: all 0.3s ease;
+}
+
+.btn-whatsapp-card:hover {
+    background-color: #1ebc57;
+    color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.btn-whatsapp-icon {
+    background-color: #25d366;
+    color: #ffffff;
+    border-radius: 50%;
+    width: 34px;
+    height: 34px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    transition: all 0.3s ease;
+}
+
+.btn-whatsapp-icon:hover {
+    background-color: #1ebc57;
+    color: #ffffff;
+    transform: scale(1.15);
+}
+
+/* Botão Flutuante do WhatsApp */
+.btn-whatsapp-float {
+    position: fixed;
+    width: 56px;
+    height: 56px;
+    bottom: 20px;
+    right: 20px;
+    background-color: #25d366;
+    color: #ffffff;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 2px 4px 12px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    animation: pulse 2s infinite;
+}
+
+.btn-whatsapp-float:hover {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+/* Animação Pulse Personalizada */
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+    }
+    70% {
+        box-shadow: 0 0 0 14px rgba(37, 211, 102, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+    }
 }
 
 /* Footer */
@@ -89,4 +187,17 @@ body {
 .text-muted-light {
     color: #ffcccc;
     font-size: 0.75rem;
+}
+
+/* Ajustes para telas médias/grandes (Tablets e PCs) */
+@media (min-width: 576px) {
+    .logo-title {
+        font-size: 3.5rem;
+    }
+    .badge-cardapio h2 {
+        font-size: 1.2rem;
+    }
+    .img-marmita {
+        height: 120px;
+    }
 }
