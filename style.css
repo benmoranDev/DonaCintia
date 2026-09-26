@@ -1,0 +1,92 @@
+/* Configurações Gerais */
+body {
+    background-color: #f8f1e7;
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+}
+
+/* Header & Banner */
+.header-banner {
+    background-color: #ffffff;
+    border-bottom: 4px solid #800000;
+}
+
+.logo-title {
+    font-family: 'Great Vibes', cursive;
+    font-size: 3.5rem;
+    color: #800000;
+    font-weight: bold;
+}
+
+.badge-cardapio {
+    background-color: #800000;
+    color: #ffffff;
+    display: inline-block;
+    padding: 8px 25px;
+    border-radius: 20px;
+}
+
+.badge-cardapio h2 {
+    font-size: 1.2rem;
+    margin: 0;
+    letter-spacing: 1px;
+}
+
+/* Ajustes das Imagens do Cardápio */
+.img-marmita {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 8px 0 0 8px;
+}
+
+.img-thumbnail-opcao {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 1px solid #800000;
+}
+
+/* Cards dos Pratos Destaque */
+.card-prato {
+    border: none;
+    border-radius: 12px;
+    overflow: hidden;
+    background-color: #ffffff;
+}
+
+.preco-texto {
+    font-weight: 600;
+    color: #555;
+}
+
+.preco {
+    color: #800000;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+/* Card Demais Opções */
+.card-demais {
+    background-color: #fff9f3;
+    border: 2px dashed #800000;
+    border-radius: 12px;
+}
+
+.list-group-item {
+    background: transparent;
+    border-bottom: 1px solid #eee;
+    font-size: 0.95rem;
+    font-weight: 500;
+}
+
+/* Footer */
+.footer-whatsapp {
+    background-color: #800000;
+}
+
+.text-muted-light {
+    color: #ffcccc;
+    font-size: 0.75rem;
+}
